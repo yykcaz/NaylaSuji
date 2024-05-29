@@ -214,6 +214,7 @@ setInterval(function() {
 var videos = document.querySelectorAll(".bergulir");
 videos.forEach(function(video) {
     video.addEventListener('loadedmetadata', function() {
+	 this.currentTime = this.duration / 10000;
     }, false);
     video.style.animation = "scroll 7s linear infinite";
 });
